@@ -1,0 +1,559 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+
+ /** This is not being loaded by editor styles 
+   * so copied and pasted style.css
+   */
+ :root {
+    --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+    --main-font-family: "Ubuntu Mono", "Roboto Mono", "Droid Sans Mono", monospace;
+    --main-font-size: 20px;
+
+    --header-font-family: var(--system-font);
+    --blockquote-font-family: 'Droid Serif', Georgia, serif;
+
+    --h1-size: 2.2rem;
+    --h2-size: 2.0rem;
+    --h3-size: 1.8rem;
+    --h4-size: 1.6rem;
+    --h5-size: 1.4rem;
+    --h6-size: 1.2rem;
+}
+
+
+body {
+	color: #333333;
+	background-color: white;
+	font-family: var(--main-font-family);
+	font-size: var(--main-font-size);
+	font-weight: normal;
+	line-height: 1.25;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.editor-post-title__block {
+	font-size: 20px;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.25;
+}
+
+a {
+	color: red;
+}
+
+a:hover {
+	color: red;
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+/**
+ * Elements
+ * - Styles for basic HTML elemants
+ */
+blockquote {
+	padding-left: 16px;
+}
+
+blockquote p {
+	font-size: 1.728rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+blockquote cite,
+blockquote footer {
+	font-size: 0.83333rem;
+	letter-spacing: normal;
+}
+
+blockquote > * {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+blockquote > *:first-child {
+	margin-top: 0;
+}
+
+blockquote > *:last-child {
+	margin-bottom: 0;
+}
+
+blockquote.alignleft, blockquote.alignright {
+	padding-left: inherit;
+}
+
+blockquote.alignleft p, blockquote.alignright p {
+	font-size: 1.44rem;
+	max-width: inherit;
+	width: inherit;
+}
+
+blockquote.alignleft cite,
+blockquote.alignleft footer, blockquote.alignright cite,
+blockquote.alignright footer {
+	font-size: 0.69444rem;
+	letter-spacing: normal;
+}
+
+figcaption {
+	color: #767676;
+	font-size: 0.69444rem;
+	margin-top: calc(0.5 * 16px);
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+.alignleft figcaption,
+.alignright figcaption {
+	margin-bottom: 0;
+}
+
+/* WP Smiley */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/**
+ * Blocks
+ * - These styles replace key Gutenberg Block styles for fonts, colors, and
+ *   spacing with CSS-variables overrides
+ */
+.wp-block-button {
+}
+
+.wp-block-button .wp-block-button__link {
+	color: white;
+	font-weight: 600;
+	font-family: var(--system-font);
+	font-size: 1.2em;
+	line-height: 1;
+	background-color: red;
+	border-radius: 11px;
+	padding: 16px 16px;
+}
+
+.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link.has-focus {
+	color: white;
+	background-color: red;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	color: red;
+	background: transparent;
+	border: 2px solid currentcolor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
+	color: red;
+}
+
+.wp-block-button.is-style-squared .wp-block-button__link {
+	border-radius: 0;
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+	background-color: #333333;
+	min-height: calc( 15 * 32px);
+	/* Treating H2 separately to account for legacy /core styles */
+}
+
+.wp-block-cover .wp-block-cover__inner-container,
+.wp-block-cover .wp-block-cover-image-text,
+.wp-block-cover .wp-block-cover-text,
+.wp-block-cover-image .wp-block-cover__inner-container,
+.wp-block-cover-image .wp-block-cover-image-text,
+.wp-block-cover-image .wp-block-cover-text {
+	color: white;
+}
+
+.wp-block-cover .wp-block-cover__inner-container a,
+.wp-block-cover .wp-block-cover-image-text a,
+.wp-block-cover .wp-block-cover-text a,
+.wp-block-cover-image .wp-block-cover__inner-container a,
+.wp-block-cover-image .wp-block-cover-image-text a,
+.wp-block-cover-image .wp-block-cover-text a {
+	color: currentColor;
+}
+
+.wp-block-cover h2,
+.wp-block-cover-image h2 {
+	font-size: 2.48832em;
+	letter-spacing: normal;
+	line-height: 1.125;
+	padding: 0;
+	max-width: inherit;
+	text-align: inherit;
+}
+
+.wp-block-cover h2.has-text-align-left,
+.wp-block-cover-image h2.has-text-align-left {
+	text-align: left;
+}
+
+.wp-block-cover h2.has-text-align-center,
+.wp-block-cover-image h2.has-text-align-center {
+	text-align: center;
+}
+
+.wp-block-cover h2.has-text-align-right,
+.wp-block-cover-image h2.has-text-align-right {
+	text-align: right;
+}
+
+.wp-block-heading h1, h1, .h1,
+.wp-block-heading h2, h2, .h2,
+.wp-block-heading h3, h3, .h3,
+.wp-block-heading h4, h4, .h4,
+.wp-block-heading h5, h5, .h5,
+.wp-block-heading h6, h6, .h6 {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	clear: both;
+}
+
+.wp-block-heading h1, h1, .h1 {
+	font-size: 2.2rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-heading h2, h2, .h2 {
+	font-size: 2.0rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-heading h3, h3, .h3 {
+	font-size: 1.8rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-heading h4, h4, .h4 {
+	font-size: 1.6rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-heading h5, h5, .h5 {
+	font-size: 1.4rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-heading h6, h6, .h6 {
+	font-size: 1.2rem;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-gallery figcaption {
+	margin-bottom: 0;
+}
+
+.wp-block-latest-posts {
+	padding-left: 0;
+}
+
+.wp-block-media-text[style*="background-color"]:not(.has-background-background-color) .block-editor-inner-blocks a {
+	color: currentColor;
+}
+
+.a8c-posts-list {
+	padding-left: 0;
+}
+
+p.has-background {
+	padding: 16px 16px;
+}
+
+p.has-background:not(.has-background-background-color) a {
+	color: currentColor;
+}
+
+.wp-block-pullquote {
+	padding: calc( 3 * 16px) 0;
+	margin-left: 0;
+	margin-right: 0;
+	text-align: center;
+	border-top-color: #DDDDDD;
+	border-top-width: 4px;
+	border-bottom-color: #DDDDDD;
+	border-bottom-width: 4px;
+	color: #333333;
+	/**
+	 * Block Options
+	 */
+}
+
+.wp-block-pullquote blockquote {
+	padding-left: 0;
+}
+
+.wp-block-pullquote p {
+	font-family: var(--blockquote-font-family);
+	font-size: 1.728em;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-pullquote a {
+	color: currentColor;
+}
+
+.wp-block-pullquote .wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+	color: #767676;
+	font-size: 0.83333em;
+	letter-spacing: normal;
+}
+
+.wp-block-pullquote:not(.is-style-solid-color) {
+	background: none;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+	background-color: red;
+	color: white;
+}
+
+.wp-block-pullquote.is-style-solid-color.alignleft blockquote,
+.wp-block-pullquote.is-style-solid-color.alignright blockquote {
+	padding-left: 16px;
+	padding-right: 16px;
+	max-width: inherit;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	padding-left: 0;
+}
+
+.wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
+.wp-block-pullquote.is-style-solid-color cite,
+.wp-block-pullquote.is-style-solid-color footer {
+	color: currentColor;
+}
+
+.wp-block-pullquote.alignwide > p,
+.wp-block-pullquote.alignfull > p,
+.wp-block-pullquote.alignwide blockquote,
+.wp-block-pullquote.alignfull blockquote {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-quote {
+	border-left-color: red;
+	margin: 32px 0;
+	padding-left: 16px;
+}
+
+.wp-block-quote p {
+	font-size: 1.728em;
+	letter-spacing: normal;
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+	border: none;
+	padding: 0 16px;
+}
+
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
+	font-size: 2.0736em;
+	letter-spacing: normal;
+	line-height: 1.125;
+}
+
+.wp-block-separator,
+hr {
+	border-bottom: 2px solid #DDDDDD;
+	clear: both;
+}
+
+.wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
+hr[style*="text-align:right"],
+hr[style*="text-align: right"] {
+	border-right-color: #DDDDDD;
+}
+
+.wp-block-separator.is-style-wide,
+hr.is-style-wide {
+	border-bottom-width: 2px;
+}
+
+.wp-block-separator.is-style-dots,
+hr.is-style-dots {
+	border-bottom: none;
+}
+
+.wp-block-separator.is-style-dots:before,
+hr.is-style-dots:before {
+	color: #DDDDDD;
+}
+
+table th,
+.wp-block-table th {
+	font-family: var(--system-font);
+}
+
+table td,
+table th,
+.wp-block-table td,
+.wp-block-table th {
+	padding: calc( 0.5 * 16px);
+}
+
+/**
+ * Editor Post Title
+ * - Needs a special styles
+ */
+.editor-post-title__block .editor-post-title__input {
+	color: #333333;
+	font-family: var(--header-font-family);
+	font-weight: 700;
+	font-size: var(--h1-size);
+	letter-spacing: normal;
+	line-height: 1.125;
+	text-align: left;
+}
+
+.has-primary-color[class] {
+	color: red !important;
+}
+
+.has-secondary-color[class] {
+	color: red !important;
+}
+
+.has-foreground-color[class] {
+	color: #333333 !important;
+}
+
+.has-foreground-light-color[class] {
+	color: #767676 !important;
+}
+
+.has-foreground-dark-color[class] {
+	color: #111111 !important;
+}
+
+.has-background-color[class] {
+	color: white !important;
+}
+
+.has-primary-background-color[class] {
+	background-color: red !important;
+	color: white;
+}
+
+.has-primary-background-color[class] p, .has-primary-background-color[class] h1, .has-primary-background-color[class] h2, .has-primary-background-color[class] h3, .has-primary-background-color[class] h4, .has-primary-background-color[class] h5, .has-primary-background-color[class] h6 {
+	color: currentColor;
+}
+
+.has-secondary-background-color[class] {
+	background-color: red !important;
+	color: white;
+}
+
+.has-secondary-background-color[class] p, .has-secondary-background-color[class] h1, .has-secondary-background-color[class] h2, .has-secondary-background-color[class] h3, .has-secondary-background-color[class] h4, .has-secondary-background-color[class] h5, .has-secondary-background-color[class] h6 {
+	color: currentColor;
+}
+
+.has-foreground-background-color[class] {
+	background-color: #333333 !important;
+	color: white;
+}
+
+.has-foreground-background-color[class] p, .has-foreground-background-color[class] h1, .has-foreground-background-color[class] h2, .has-foreground-background-color[class] h3, .has-foreground-background-color[class] h4, .has-foreground-background-color[class] h5, .has-foreground-background-color[class] h6 {
+	color: currentColor;
+}
+
+.has-foreground-light-background-color[class] {
+	background-color: #767676 !important;
+	color: white;
+}
+
+.has-foreground-light-background-color[class] p, .has-foreground-light-background-color[class] h1, .has-foreground-light-background-color[class] h2, .has-foreground-light-background-color[class] h3, .has-foreground-light-background-color[class] h4, .has-foreground-light-background-color[class] h5, .has-foreground-light-background-color[class] h6 {
+	color: currentColor;
+}
+
+.has-foreground-dark-background-color[class] {
+	background-color: #111111 !important;
+	color: white;
+}
+
+.has-foreground-dark-background-color[class] p, .has-foreground-dark-background-color[class] h1, .has-foreground-dark-background-color[class] h2, .has-foreground-dark-background-color[class] h3, .has-foreground-dark-background-color[class] h4, .has-foreground-dark-background-color[class] h5, .has-foreground-dark-background-color[class] h6 {
+	color: currentColor;
+}
+
+.has-background-background-color[class] {
+	background-color: white !important;
+	color: #333333;
+}
+
+.has-background-background-color[class] p, .has-background-background-color[class] h1, .has-background-background-color[class] h2, .has-background-background-color[class] h3, .has-background-background-color[class] h4, .has-background-background-color[class] h5, .has-background-background-color[class] h6 {
+	color: currentColor;
+}
+
+.is-small-text,
+.has-small-font-size {
+	font-size: 0.83333em;
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: 1.2em;
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: 1.44em;
+	line-height: 1.125;
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: 1.728em;
+	line-height: 1.125;
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: calc(2 * 2.98598em);
+	font-weight: 700;
+}
+
+/**
+ * Extras
+ */
+.editor-post-title__input {
+	text-align: center;
+}
