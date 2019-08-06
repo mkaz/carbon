@@ -17,7 +17,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
-			<?php varia_entry_meta(); ?>
+			<?php jots_entry_meta(); ?>
 		</div><!-- .meta-info -->
 		<?php endif; ?>
 	</header>
@@ -49,7 +49,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php varia_entry_footer(); ?>
+		<?php jots_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

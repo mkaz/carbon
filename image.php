@@ -36,7 +36,7 @@ get_header();
 							 *
 							 * @param string $image_size Image size. Default 'large'.
 							 */
-							$image_size = apply_filters( 'varia_attachment_size', 'full' );
+							$image_size = apply_filters( 'jots_attachment_size', 'full' );
 
 							echo wp_get_attachment_image( get_the_ID(), $image_size );
 						?>
@@ -75,7 +75,7 @@ get_header();
 					}
 					?>
 
-						<?php varia_entry_footer(); ?>
+						<?php jots_entry_footer(); ?>
 
 					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->

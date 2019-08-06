@@ -30,7 +30,7 @@ get_header();
 			}
 
 			// Previous/next page navigation.
-			varia_the_posts_navigation();
+			jots_the_posts_navigation();
 
 		} else {
 
