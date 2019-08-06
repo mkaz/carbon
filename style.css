@@ -645,11 +645,11 @@ input[type="submit"],
 	cursor: pointer;
 	font-weight: 600;
 	font-family: var(--system-font);
-	font-size: 1.2rem;
+	font-size: 1.0rem;
 	background-color: red;
-	border-radius: 11px;
+	border-radius: 4px;
 	border-width: 0;
-	padding: 16px 16px;
+	padding: 8px 16px;
 }
 
 button:before,
@@ -2174,14 +2174,14 @@ table th,
  * Comment Title
  */
 .comments-title {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	letter-spacing: normal;
 	padding-top: 32px;
 	border-top: 1px solid #DDDDDD;
 }
 
 .comment-reply-title {
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -2221,7 +2221,7 @@ table th,
 
 @media only screen and (min-width: 480px) {
 	.children {
-		margin-left: 32px;
+		margin-left: 64px;
 	}
 }
 
@@ -2240,13 +2240,13 @@ table th,
 
 @media only screen and (min-width: 480px) {
 	.comment-meta .comment-author {
-		display: flex;
+		display: none;
 		align-items: center;
 	}
 }
 
 .comment-meta .comment-author .avatar {
-	display: block;
+	display: none;
 	position: absolute;
 	right: 0;
 }
@@ -2318,8 +2318,8 @@ table th,
 }
 
 .comment-body > * {
-	margin-top: 32px;
-	margin-bottom: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 }
 
 .comment-content a {
@@ -2383,7 +2383,7 @@ table th,
 @media only screen and (min-width: 480px) {
 
 	.comment-form > p label {
-		display: block;
+		display: none;
 
 	}
 	.comment-form > p.comment-form-cookies-consent {
@@ -2395,7 +2395,7 @@ table th,
 	}
 
 	.comment-form > p.comment-notes, .comment-form > p.logged-in-as {
-		display: block;
+		display: none;
 	}
 }
 

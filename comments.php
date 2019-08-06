@@ -26,7 +26,7 @@ if ( post_password_required() ) {
 	if ( have_comments() ) :
 		?>
 		<h2 class="comments-title">
-			<?php echo __( 'Replies' ); ?>
+			<?php echo __( 'Comments' ); ?>
 		</h2>
 
 		<?php the_comments_navigation(); ?>

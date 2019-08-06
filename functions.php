@@ -119,3 +119,18 @@ add_action( 'after_setup_theme', function() {
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'jots-style' );
 } );
+
+
+/**
+ * Changes comment form default fields.
+ */
+add_filter( 'comment_form_defaults', function( $defaults ) {
+	$comment_field = $defaults['comment_field'];
+
+	// Adjust height of comment form.
+	$defaults['comment_field'] = preg_replace( '/rows="\d+"/', 'rows="5"', $comment_field );
+	$defaults['title_reply'] = __( 'Add Comment' );
+	$defaults['label_submit'] = __( 'Submit' );
+
+	return $defaults;
+} );
