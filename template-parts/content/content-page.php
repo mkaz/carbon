@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -23,7 +23,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'jots' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'carbon' ),
 				'after'  => '</div>',
 			)
 		);
@@ -37,7 +37,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'jots' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'carbon' ),
 						array(
 							'span' => array(
 								'class' => array(),

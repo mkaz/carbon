@@ -2,7 +2,7 @@
 /**
  * SVG Icons class
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */

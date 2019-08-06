@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Jots
+ * @package Carbon
  */
 
 /*
@@ -45,7 +45,7 @@ if ( post_password_required() ) {
 
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'jots' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'carbon' ); ?></p>
 			<?php
 		endif;
 

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -17,7 +17,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
-			<?php jots_entry_meta(); ?>
+			<?php carbon_entry_meta(); ?>
 		</div><!-- .meta-info -->
 		<?php endif; ?>
 	</header>
@@ -28,7 +28,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'jots' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'carbon' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -41,7 +41,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'jots' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'carbon' ),
 				'after'  => '</div>',
 			)
 		);
@@ -49,7 +49,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php jots_entry_footer(); ?>
+		<?php carbon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -28,18 +28,18 @@ get_header();
 					the_post_navigation(
 						array(
 							/* translators: %s: parent post link */
-							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'jots' ), '%title' ),
+							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'carbon' ), '%title' ),
 						)
 					);
 				} elseif ( is_singular( 'post' ) ) {
 					// Previous/next post navigation.
 					the_post_navigation(
 						array(
-							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'jots' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Next post:', 'jots' ) . '</span> <br/>' .
+							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'carbon' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Next post:', 'carbon' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'jots' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Previous post:', 'jots' ) . '</span> <br/>' .
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'carbon' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Previous post:', 'carbon' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
 						)
 					);

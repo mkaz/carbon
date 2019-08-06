@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -39,7 +39,7 @@ get_header();
 			endwhile;
 
 			// Previous/next page navigation.
-			jots_the_posts_navigation();
+			carbon_the_posts_navigation();
 
 			// If no content, include the "No posts found" template.
 		else :

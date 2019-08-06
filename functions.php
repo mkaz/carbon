@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package jots
+ * @package carbon
  * @since 1.0.0
  */
 
@@ -17,26 +17,26 @@ add_action( 'after_setup_theme', function() {
 		'editor-font-sizes',
 		array(
 			array(
-				'name'      => __( 'Small', 'jots' ),
-				'shortName' => __( 'S', 'jots' ),
+				'name'      => __( 'Small', 'carbon' ),
+				'shortName' => __( 'S', 'carbon' ),
 				'size'      => 19.5,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => __( 'Normal', 'jots' ),
-				'shortName' => __( 'M', 'jots' ),
+				'name'      => __( 'Normal', 'carbon' ),
+				'shortName' => __( 'M', 'carbon' ),
 				'size'      => 22,
 				'slug'      => 'normal',
 			),
 			array(
-				'name'      => __( 'Large', 'jots' ),
-				'shortName' => __( 'L', 'jots' ),
+				'name'      => __( 'Large', 'carbon' ),
+				'shortName' => __( 'L', 'carbon' ),
 				'size'      => 36.5,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => __( 'Huge', 'jots' ),
-				'shortName' => __( 'XL', 'jots' ),
+				'name'      => __( 'Huge', 'carbon' ),
+				'shortName' => __( 'XL', 'carbon' ),
 				'size'      => 49.5,
 				'slug'      => 'huge',
 			),
@@ -47,32 +47,32 @@ add_action( 'after_setup_theme', function() {
 		'editor-color-palette',
 		array(
 			array(
-				'name'  => __( 'Primary', 'jots' ),
+				'name'  => __( 'Primary', 'carbon' ),
 				'slug'  => 'primary',
 				'color' => '#0000FF',
 			),
 			array(
-				'name'  => __( 'Secondary', 'jots' ),
+				'name'  => __( 'Secondary', 'carbon' ),
 				'slug'  => 'secondary',
 				'color' => '#FF0000',
 			),
 			array(
-				'name'  => __( 'Dark Gray', 'jots' ),
+				'name'  => __( 'Dark Gray', 'carbon' ),
 				'slug'  => 'foreground-dark',
 				'color' => '#111111',
 			),
 			array(
-				'name'  => __( 'Gray', 'jots' ),
+				'name'  => __( 'Gray', 'carbon' ),
 				'slug'  => 'foreground',
 				'color' => '#444444',
 			),
 			array(
-				'name'  => __( 'Light Gray', 'jots' ),
+				'name'  => __( 'Light Gray', 'carbon' ),
 				'slug'  => 'foreground-light',
 				'color' => '#767676',
 			),
 			array(
-				'name'  => __( 'White', 'jots' ),
+				'name'  => __( 'White', 'carbon' ),
 				'slug'  => 'background',
 				'color' => '#FFFFFF',
 			),
@@ -90,10 +90,10 @@ add_action( 'after_setup_theme', function() {
  * @global int $content_width Content width.
  */
 add_action( 'after_setup_theme', function() {
-	// This jotsble is intended to be overruled from themes.
+	// This carbonble is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'jots_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'carbon_content_width', 640 );
 }, 0 );
 
 
@@ -102,7 +102,7 @@ add_action( 'after_setup_theme', function() {
  */
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style(
-		'jots-style',
+		'carbon-style',
 		get_stylesheet_uri(),
 		array(), 
 		filemtime( get_stylesheet_directory() . '/style.css' )

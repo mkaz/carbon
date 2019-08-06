@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -21,21 +21,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jots' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'carbon' ); ?></a>
 
 		<header id="masthead" class="site-header responsive-max-width">
 
 			<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
 			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'jots' ); ?>">
+				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'carbon' ); ?>">
 					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
 					<label for="toggle" id="toggle-menu" class="button">
-						<?php _e( 'Menu', 'jots' ); ?>
+						<?php _e( 'Menu', 'carbon' ); ?>
 						<span class="dropdown-icon open">+</span>
 						<span class="dropdown-icon close">&times;</span>
-						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'jots' ); ?></span>
-						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'jots' ); ?></span>
+						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'carbon' ); ?></span>
+						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'carbon' ); ?></span>
 					</label>
 					<?php
 					wp_nav_menu(

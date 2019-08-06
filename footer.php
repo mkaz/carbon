@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -23,7 +23,7 @@
 		}
 		?>
 		<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
-			<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'jots' ); ?>">
+			<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'carbon' ); ?>">
 				<?php
 				wp_nav_menu(
 					array(
@@ -40,10 +40,10 @@
 			<?php if ( ! empty( $blog_info ) ) : ?>
 				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><span class="comma">,</span>
 			<?php endif; ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jots' ) ); ?>" class="imprint">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'carbon' ) ); ?>" class="imprint">
 				<?php
 				/* translators: %s: WordPress. */
-				printf( __( 'proudly powered by %s.', 'jots' ), 'WordPress' );
+				printf( __( 'proudly powered by %s.', 'carbon' ), 'WordPress' );
 				?>
 			</a>
 		</div><!-- .site-info -->

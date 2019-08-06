@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -15,7 +15,7 @@
 	<header class="entry-header responsive-max-width">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'jots' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'carbon' ) );
 		}
 		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>
@@ -26,6 +26,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php jots_entry_footer(); ?>
+		<?php carbon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->

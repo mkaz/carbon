@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package jots
+ * @package carbon
  * 
  * @since 1.0.0
  */
@@ -15,7 +15,7 @@
 	<header class="entry-header responsive-max-width">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'jots' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'carbon' ) );
 		}
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -31,7 +31,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'jots' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'carbon' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -44,7 +44,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'jots' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'carbon' ),
 				'after'  => '</div>',
 			)
 		);
@@ -52,6 +52,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php jots_entry_footer(); ?>
+		<?php carbon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->
