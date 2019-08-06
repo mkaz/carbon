@@ -8,22 +8,6 @@
  * @since 1.0.0
  */
 
-add_action( 'init', function() {
-
-	wp_register_style(
-		'jots-style-variables',
-		get_template_directory_uri() . 'style-variables.css',
-		array()
-	);
-
-	wp_register_style(
-		'jots-style',
-		get_stylesheet_uri(),
-		array( 'jots-style-variables' )
-	);
-
-} );
-
 add_action( 'after_setup_theme', function() {
 	
 	add_theme_support( 'editor-styles' );
@@ -117,7 +101,12 @@ add_action( 'after_setup_theme', function() {
  * Enqueue scripts and styles.
  */
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style( 'jots-style' );
+	wp_enqueue_style(
+		'jots-style',
+		get_stylesheet_uri(),
+		array(), 
+		filemtime( get_stylesheet_directory() . '/style.css' )
+	);
 } );
 
 
@@ -134,3 +123,6 @@ add_filter( 'comment_form_defaults', function( $defaults ) {
 
 	return $defaults;
 } );
+
+require get_template_directory() . '/inc/class-varia-svg-icons.php';
+require get_template_directory() . '/inc/template-tags.php';

@@ -1,16 +1,14 @@
 @charset "UTF-8";
 /*
 Theme Name: Jots
-Theme URI: https://github.com/Automattic/themes/jots
-Author: the WordPress team
-Author URI: https://wordpress.org/
-Description: A design system for WordPress sites built with Gutenberg.
-Requires at least: WordPress 4.9.6
+Theme URI: https://github.com/mkaz/jots
+Author: Marcus Kazmierczak
+Author URI: https://mkaz.blog/
+Description:  A theme for taking notes
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: jots
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -2039,37 +2037,20 @@ table th,
 	}
 }
 
-@media only screen and (min-width: 480px) {
-	.comment-meta .comment-author {
-		display: none;
-		align-items: center;
-	}
-}
-
-.comment-meta .comment-author .avatar {
+.comment-author {
 	display: none;
-	position: absolute;
-	right: 0;
 }
 
-@media only screen and (min-width: 480px) {
-	.comment-meta .comment-author .avatar {
-		margin-right: 16px;
-		display: inherit;
-		position: inherit;
-		right: inherit;
-	}
+.comment-meta {
+	color: #333333;
+	font-size: 0.80rem;
 }
 
-.comment-meta .comment-metadata {
+.comment-meta  a {
 	color: #333333;
 }
 
-.comment-meta .comment-metadata a {
-	color: currentColor;
-}
-
-.comment-meta .comment-metadata a:hover, .comment-meta .comment-metadata a:active {
+.comment-meta a:hover, .comment-meta a:active {
 	color: red;
 }
 
@@ -2079,6 +2060,10 @@ table th,
 		display: flex;
 		justify-content: space-between;
 	}
+}
+
+.comment-edit-link {
+	display: none;
 }
 
 .comment-metadata,

@@ -21,8 +21,6 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php varia_post_thumbnail(); ?>
-
 	<div class="entry-content responsive-max-width">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
