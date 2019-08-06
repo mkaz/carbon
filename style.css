@@ -397,8 +397,8 @@ footer {
 }
 
 .site-main > * {
-	margin-top: 48px;
-	margin-bottom: 48px;
+	margin-top: 32px;
+	margin-bottom: 32px;
 }
 
 .site-main > *:first-child {
