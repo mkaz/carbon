@@ -486,7 +486,7 @@ footer {
 }
 
 .entry-content > * {
-	
+
 }
 
 .entry-content > *.alignleft, .entry-content > *.alignright,
@@ -2105,9 +2105,9 @@ ol.children .comment {
 	max-width: calc( 100vw - 32px);
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 800px) {
 	.responsive-max-width {
-		max-width: calc( 880px );
+		max-width: 786px;	
 	}
 }
 
