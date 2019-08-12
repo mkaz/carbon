@@ -81,12 +81,6 @@ get_header();
 				</article><!-- #post-## -->
 
 				<?php
-				// Parent post navigation.
-				the_post_navigation(
-					array(
-						'prev_text' => _x( '<span class="meta-nav">Published in</span><br><span class="post-title">%title</span>', 'Parent post link', 'carbon' ),
-					)
-				);
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) {
