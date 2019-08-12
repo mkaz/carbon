@@ -47,7 +47,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--color-site-title:  #5596e6;
     --color-link: #3d70b2;
 	--color-accent: red;
-	--color-background: #CCCCCC;
 }
 
 html {
@@ -63,8 +62,8 @@ body {
 	font-size: 1rem;
 	font-weight: normal;
 	color: #333333;
-	text-align: left;
-	background-color:var(--color-background);
+	/* user settable in customizer */
+	background-color: #EEEEEE;
 }
 
 main {
