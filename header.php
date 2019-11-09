@@ -14,5 +14,5 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<container class="site">
+		<div class="site-wrapper">
 		

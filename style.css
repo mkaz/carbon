@@ -16,22 +16,76 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 :root {
 	--system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--main-font: 'Noto Serif', Georgia, serif;
+
+	--color-main-1: #3d70b2;
+	--color-main-2: #5596e6;
+	--color-accent: #41d6c3;
+	--color-gray-1: #f4f7fb;
+	--color-gray-2: #dfe3e6;
+	--color-gray-3: #8897a2;
+	--color-gray-4: #5a6872;
+	--color-gray-5: #343c42;
+
+	--size-9: 1.7778rem;
+	--size-8: 1.5555rem;
+	--size-7: 1.3889rem;
+	--size-6: 1.3889rem;
+	--size-5: 1.2222rem;
+	--size-4: 1.1111rem;
+	--size-3: 1.0rem;
+	--size-2: 0.8889rem;
+	--size-1: 0.7778rem;	
+
+	--content-width: 656px;
 }
 
-body {
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+	--webkit-text-size-adjust: 100%;
 	font-family: 'Noto Serif', Georgia, serif;
 	font-size: 18px;
 }
+body {
+	margin: 0;
+	font-size: var(--size-3);
+	color: var(--color-gray-5);
+}
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Noto Serif', Georgia, serif;
 	font-weight: 700;
 	margin: 0;
 }
 
-h1 { font-size: 1.7778rem; }
-h2 { font-size: 1.5555rem; }
-h3 { font-size: 1.3889rem; }
-h4 { font-size: 1.3889rem; }
-h5 { font-size: 1.2222rem; }
-h6 { font-size: 1.1111rem; }
+a {
+	color: var(--color-main-1);
+}
+
+a:visited {
+	color: var(--color-gray-4);
+}
+
+a:hover {
+	color: var(--color-accent);
+}
+
+
+h1 { font-size: var(--size-9); }
+h2 { font-size: var(--size-8); }
+h3 { font-size: var(--size-7); }
+h4 { font-size: var(--size-6); }
+h5 { font-size: var(--size-5); }
+h6 { font-size: var(--size-4); }
+
+figure, main { display: block }
+
+.site-wrapper {
+	display: block;
+	max-width: var(--content-width);
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 4%;
+}

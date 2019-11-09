@@ -12,7 +12,7 @@ echo '<script>';
 echo 'const posts = ' . json_encode( $posts );
 echo '</script>';
 
-// posts component attach here
+// posts component attachs here
 echo '<main><div id="posts"></div></main>';
 
 get_footer();
