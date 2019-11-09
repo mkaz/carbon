@@ -1,47 +1,18 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
+ * index.php
  * @package carbon
- * 
  * @since 1.0.0
  */
 
 get_header();
-?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main responsive-max-width">
+// write posts data to javascript variable
+echo '<script>';
+echo 'const posts = ' . json_encode( $posts );
+echo '</script>';
 
-		<?php
-		if ( have_posts() ) {
+// posts component attach here
+echo '<main><div id="posts"></div></main>';
 
-			// Load posts loop.
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( 'template-parts/content/content', 'excerpt' );
-			}
-
-			// Previous/next page navigation.
-			carbon_the_posts_navigation();
-
-		} else {
-
-			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		}
-		?>
-
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
-
-<?php
 get_footer();
