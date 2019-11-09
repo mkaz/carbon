@@ -16,7 +16,6 @@ const PageTitle = styled.h3`
 `;
 
 const Posts = ( { posts } ) => {
-    
     return (
         <PostList>
             <PageTitle> Articles </PageTitle>

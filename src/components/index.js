@@ -1,8 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Link = styled.a`
+const CleanLink = styled.a`
     text-decoration: none;
+`;
+
+const Row = styled.div`
+    display: flex;
+`;
+
+const MetaItem = styled.div`
+    color: var(--color-gray-4);
+    font-size: var(--size-2);
+    font-family: var(--system-font);
 `;
 
 const Title = ( { title } ) => (
@@ -13,8 +23,8 @@ const Title = ( { title } ) => (
 
 const LinkedTitle = ( { title, link } ) => (
     <Title 
-        title={ <Link href={ link }>{ title }</Link> }
+        title={ <CleanLink href={ link }>{ title }</CleanLink> }
     />
 );
 
-export { Title, LinkedTitle };
+export { LinkedTitle, MetaItem, Row, Title };
