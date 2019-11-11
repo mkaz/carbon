@@ -22,7 +22,7 @@ const Title = ( { title } ) => (
 );
 
 const LinkedTitle = ( { title, link } ) => (
-    <Title 
+    <Title
         title={ <CleanLink href={ link }>{ title }</CleanLink> }
     />
 );

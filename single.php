@@ -7,10 +7,8 @@
 
 get_header();
 
-// write posts data to javascript variable
-echo '<script>';
-echo 'const post = ' . json_encode( $posts[0] );
-echo '</script>';
+// gets data and writes to js variable
+carbon_get_post();
 
 // post component attachs here
 echo '<main><div id="post"></div></main>';

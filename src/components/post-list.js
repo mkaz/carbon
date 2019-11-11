@@ -6,26 +6,24 @@ import styled from 'styled-components';
  */
 import { PostSummary } from './post';
 
-const PostList = styled.div`
-    margin: 32px 0;
-`;
-
 const PageTitle = styled.h3`
-    font-family: var(--system-font);    
-    text-decoration: underline;
+	font-family: var(--system-font);
+	text-decoration: underline;
+	margin-top: 32px;
 `;
 
-const Posts = ( { posts } ) => {
-    return (
-        <PostList>
-            <PageTitle> Articles </PageTitle>
-            { posts.map( post => (
-                <PostSummary
-                    key={ post.ID }
-                    post={ post }
-                />
-            ) ) }
-        </PostList>
-    );
+const PostList = ( { posts } ) => {
+	console.log( posts );
+	return (
+		<>
+			<PageTitle> Articles </PageTitle>
+			{ posts.map( post => (
+				<PostSummary
+					key={ post.id }
+					post={ post }
+				/>
+			) ) }
+		</>
+	);
 }
-export default Posts;
+export default PostList;

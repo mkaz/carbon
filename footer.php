@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 ?>
-		</container>
+		</div>
 
     <?php wp_footer(); ?>
 

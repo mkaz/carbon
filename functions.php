@@ -10,7 +10,7 @@
  * Add Google webfonts
  */
 function carbon_fonts_url() {
-	       
+
 	$font_families = array();
 	$font_families[] = 'Noto+Serif:400,700';
 
@@ -23,7 +23,7 @@ function carbon_fonts_url() {
 
 	return esc_url_raw( $fonts_url );
 }
-	
+
 /**
  * Enqueue scripts and styles.
  */
@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style(
 		'carbon-style',
 		get_stylesheet_uri(),
-		array(), 
+		array(),
 		filemtime( get_stylesheet_directory() . '/style.css' )
 	);
 
@@ -48,3 +48,5 @@ add_action( 'wp_enqueue_scripts', function() {
 	);
 
 } );
+
+require_once( __DIR__ . '/utils.php' );
